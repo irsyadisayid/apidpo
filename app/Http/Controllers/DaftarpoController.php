@@ -163,7 +163,7 @@ class DaftarpoController extends Controller
             //     $photo->move('images',$gambar);
             // }
 
-            return $photo;
+            return $infot;
     
             //   $pengguna = Pengguna::whereId($id)->get();
             // $daftarpo= Daftarpo::create([
