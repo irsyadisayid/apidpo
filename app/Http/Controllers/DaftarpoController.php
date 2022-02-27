@@ -163,34 +163,34 @@ class DaftarpoController extends Controller
             //     $photo->move('images',$gambar);
             // }
 
-            // return $photo;
+            return $photo;
     
             //   $pengguna = Pengguna::whereId($id)->get();
-            $daftarpo= Daftarpo::create([
-                'id_user'=> $id_user,
-                'nama'=> $nama,
-                'ttl'=> $ttl,
-                'jekel'=> $jekel,
-                'tb'=> $tb,
-                'rambut'=> $rambut,
-                'kulit'=> $kulit,
-                'mata'=> $mata,
-                'cirik'=> $cirik,
-                'tglhilang'=> $tglhilang,
-                'infot'=> $infot,
-                'photo'=> 'lll',
-            ]);
-            if($daftarpo){
-                return response()->json([
-                    "status" => true,
-                    "message" => "succes"
-                ],201);
-            }else{
-                return response()->json([
-                    "status" => false,
-                    "message" => "id not found"
-                ],401);
-            }
+            // $daftarpo= Daftarpo::create([
+            //     'id_user'=> $id_user,
+            //     'nama'=> $nama,
+            //     'ttl'=> $ttl,
+            //     'jekel'=> $jekel,
+            //     'tb'=> $tb,
+            //     'rambut'=> $rambut,
+            //     'kulit'=> $kulit,
+            //     'mata'=> $mata,
+            //     'cirik'=> $cirik,
+            //     'tglhilang'=> $tglhilang,
+            //     'infot'=> $infot,
+            //     'photo'=> 'lll',
+            // ]);
+            // if($daftarpo){
+            //     return response()->json([
+            //         "status" => true,
+            //         "message" => "succes"
+            //     ],201);
+            // }else{
+            //     return response()->json([
+            //         "status" => false,
+            //         "message" => "id not found"
+            //     ],401);
+            // }
         }else{
             return response()->json([
                 "status"=>false,
