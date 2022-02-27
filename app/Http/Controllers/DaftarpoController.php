@@ -140,8 +140,6 @@ class DaftarpoController extends Controller
     }
 
     public function insert (Request $request){
-
-        return 'hello';
         $validation = $this->validationJWT($request);
         
         if($validation["status"]){
@@ -163,6 +161,8 @@ class DaftarpoController extends Controller
                 $gambar=time() .$photo->getClientOriginalName();
                 $photo->move('images',$gambar);
             }
+
+            return $photo;
     
             //   $pengguna = Pengguna::whereId($id)->get();
             $daftarpo= Daftarpo::create([
