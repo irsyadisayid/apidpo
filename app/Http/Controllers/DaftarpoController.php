@@ -141,63 +141,63 @@ class DaftarpoController extends Controller
 
     public function insert (Request $request){
         return 'hellow';
-        $validation = $this->validationJWT($request);
+        // $validation = $this->validationJWT($request);
         
-        if($validation["status"]){
-            $id_user = $validation["data"]["id"];
-            $nama = $request->input('nama');
-            $ttl = $request->input('ttl');
-            $jekel = $request->input('jekel');
-            $tb = $request->input('tb');
-            $rambut = $request->input('rambut');
-            $kulit = $request->input('kulit');
-            $mata = $request->input('mata');
-            $cirik = $request->input('cirik');
-            $tglhilang = $request->input('tglhilang');
-            $infot = $request->input('infot');
-            $photo = $request->file('photo');
+        // if($validation["status"]){
+        //     $id_user = $validation["data"]["id"];
+        //     $nama = $request->input('nama');
+        //     $ttl = $request->input('ttl');
+        //     $jekel = $request->input('jekel');
+        //     $tb = $request->input('tb');
+        //     $rambut = $request->input('rambut');
+        //     $kulit = $request->input('kulit');
+        //     $mata = $request->input('mata');
+        //     $cirik = $request->input('cirik');
+        //     $tglhilang = $request->input('tglhilang');
+        //     $infot = $request->input('infot');
+        //     $photo = $request->file('photo');
 
 
-            // return $photo;
-            // if($photo){
-            //     $gambar=time() . $photo->getClientOriginalName();
-            //     $photo->move('images',$gambar);
-            // }
+        //     // return $photo;
+        //     // if($photo){
+        //     //     $gambar=time() . $photo->getClientOriginalName();
+        //     //     $photo->move('images',$gambar);
+        //     // }
 
             
     
-            //   $pengguna = Pengguna::whereId($id)->get();
-            // $daftarpo= Daftarpo::create([
-            //     'id_user'=> $id_user,
-            //     'nama'=> $nama,
-            //     'ttl'=> $ttl,
-            //     'jekel'=> $jekel,
-            //     'tb'=> $tb,
-            //     'rambut'=> $rambut,
-            //     'kulit'=> $kulit,
-            //     'mata'=> $mata,
-            //     'cirik'=> $cirik,
-            //     'tglhilang'=> $tglhilang,
-            //     'infot'=> $infot,
-            //     'photo'=> 'lll',
-            // ]);
-            // if($daftarpo){
-            //     return response()->json([
-            //         "status" => true,
-            //         "message" => "succes"
-            //     ],201);
-            // }else{
-            //     return response()->json([
-            //         "status" => false,
-            //         "message" => "id not found"
-            //     ],401);
-            // }
-        }else{
-            return response()->json([
-                "status"=>false,
-                "message"=>$validation["message"]
-            ],401);
-        }
+        //     //   $pengguna = Pengguna::whereId($id)->get();
+        //     // $daftarpo= Daftarpo::create([
+        //     //     'id_user'=> $id_user,
+        //     //     'nama'=> $nama,
+        //     //     'ttl'=> $ttl,
+        //     //     'jekel'=> $jekel,
+        //     //     'tb'=> $tb,
+        //     //     'rambut'=> $rambut,
+        //     //     'kulit'=> $kulit,
+        //     //     'mata'=> $mata,
+        //     //     'cirik'=> $cirik,
+        //     //     'tglhilang'=> $tglhilang,
+        //     //     'infot'=> $infot,
+        //     //     'photo'=> 'lll',
+        //     // ]);
+        //     // if($daftarpo){
+        //     //     return response()->json([
+        //     //         "status" => true,
+        //     //         "message" => "succes"
+        //     //     ],201);
+        //     // }else{
+        //     //     return response()->json([
+        //     //         "status" => false,
+        //     //         "message" => "id not found"
+        //     //     ],401);
+        //     // }
+        // }else{
+        //     return response()->json([
+        //         "status"=>false,
+        //         "message"=>$validation["message"]
+        //     ],401);
+        // }
     }
 
     public function updated(Request $request,$id){
