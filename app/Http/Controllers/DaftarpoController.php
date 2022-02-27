@@ -158,7 +158,7 @@ class DaftarpoController extends Controller
 
 
             if($photo){
-                $gambar=time() .$photo->getClientOriginalName();
+                $gambar=time() . $photo->getClientOriginalName();
                 $photo->move('images',$gambar);
             }
 
