@@ -157,7 +157,7 @@ class DaftarpoController extends Controller
             $photo = $request->file('photo');
 
 
-            return $photo;
+            // return $photo;
             // if($photo){
             //     $gambar=time() . $photo->getClientOriginalName();
             //     $photo->move('images',$gambar);
