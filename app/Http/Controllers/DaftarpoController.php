@@ -140,8 +140,7 @@ class DaftarpoController extends Controller
     }
 
     public function insert (Request $request){
-        $infot = $request->input('infot');
-        return $infot;
+        return 'hellow';
         $validation = $this->validationJWT($request);
         
         if($validation["status"]){
