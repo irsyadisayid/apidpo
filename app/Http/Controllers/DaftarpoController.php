@@ -157,10 +157,10 @@ class DaftarpoController extends Controller
             $photo = $request->file('photo');
 
 
-            // if($photo){
-            //     $gambar=time() .$photo->getClientOriginalName();
-            //     $photo->move('images',$gambar);
-            // }
+            if($photo){
+                $gambar=time() .$photo->getClientOriginalName();
+                $photo->move('images',$gambar);
+            }
 
             // return $photo;
     
@@ -177,7 +177,7 @@ class DaftarpoController extends Controller
                 'cirik'=> $cirik,
                 'tglhilang'=> $tglhilang,
                 'infot'=> $infot,
-                'photo'=> 'test',
+                'photo'=> $gambar,
             ]);
             if($daftarpo){
                 return response()->json([
