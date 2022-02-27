@@ -141,8 +141,7 @@ class DaftarpoController extends Controller
 
     public function insert (Request $request){
         $validation = $this->validationJWT($request);
-        $infot = $request->input('infot');
-        return $infot;
+        return 'halo';
         if($validation["status"]){
             $id_user = $validation["data"]["id"];
             $nama = $request->input('nama');
