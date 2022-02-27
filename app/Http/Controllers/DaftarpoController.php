@@ -157,12 +157,12 @@ class DaftarpoController extends Controller
             $photo = $request->file('photo');
 
 
-            if($photo){
-                $gambar=time() .$photo->getClientOriginalName();
-                $photo->move('images',$gambar);
-            }
+            // if($photo){
+            //     $gambar=time() .$photo->getClientOriginalName();
+            //     $photo->move('images',$gambar);
+            // }
 
-            return $photo;
+            // return $photo;
     
             //   $pengguna = Pengguna::whereId($id)->get();
             $daftarpo= Daftarpo::create([
@@ -177,7 +177,7 @@ class DaftarpoController extends Controller
                 'cirik'=> $cirik,
                 'tglhilang'=> $tglhilang,
                 'infot'=> $infot,
-                'photo'=> $gambar,
+                'photo'=> 'test',
             ]);
             if($daftarpo){
                 return response()->json([
